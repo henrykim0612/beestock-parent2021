@@ -4,15 +4,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.beestock</groupId>
-    <artifactId>beestock-parent-dev</artifactId>
-    <version>1.8.9-SNAPSHOT</version>
+    <artifactId>beestock-parent</artifactId>
+    <version>1.8.9</version>
     <!-- <modules>
          <module>../beestock-web</module>
      </modules>-->
     <packaging>pom</packaging>
 
     <properties>
-        <deploy-version>DEV</deploy-version>
+        <deploy-version>REAL</deploy-version>
         <java-version>1.8</java-version>
         <org.springframework-version>5.2.3.RELEASE</org.springframework-version>
         <org.springframework.spring-webmvc-version>5.2.3.RELEASE</org.springframework.spring-webmvc-version>
@@ -45,15 +45,15 @@
             <properties>
                 <env>dev</env>
             </properties>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
         </profile>
         <profile>
             <id>real</id>
             <properties>
                 <env>real</env>
             </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
         </profile>
     </profiles>
 
